@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search.ejs</title>
+</head>
+<body>
+
+    <form method="get" action="/search">
+    <input type="radio" name="entire_title" value="국내숙소" checked> <br>
+    검색조건: <input type="text" name="search"> <br>
+    시작일:<input type="text" name="startDate"> <br>
+    퇴실:<input type="text" name="endDate"> <br>
+    인원<input type="number" name="human_count">
+    <input type="submit" name="submit" >
+    </form>
+
+
+    <ul>
+        <% for (let i =0 ; i<data.length; i++) { %>
+         <li>-----------</li> 
+         <li><%= data[i].search %> </li>
+         <li><%= data[i].start_date %></li> 
+         <li><%= data[i].end_date%></li>
+         <li><%= data[i].adult_num%></li>
+         <% } %>
+    </ul>
+
+
+    <script src="./js/search.js"></script>
+</body>
+</html>

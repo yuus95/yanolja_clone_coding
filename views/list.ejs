@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    asdasd
+    <ul>
+        <% for(let i = 0 ; i<data.length; i++){ %>
+            --------------------------
+            <li> <%= data[i].id %></li>
+            <li> <%= data[i].product_title %></li>
+            <li> <img src=<%= data[i].image_url %> height= 100px; alt=""></li>
+            <li> <%= data[i].review_score %></li>
+            <li> <%= data[i].review_sum %></li>
+            <li> <%= data[i].product_event %></li>
+            <li> <%= data[i].room_price %></li>
+            <li> <%= data[i].sleep_price %></li>
+            <li> <%= data[i].room_time %></li>
+            <li> <%= data[i].sleep_time %></li>
+            <% } %>
+    </ul>
+    
+
+</body>
+</html>

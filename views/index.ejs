@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yushin.kr</title>
+</head>
+<body>
+   메뉴 리스트
+    <ul>
+        <% for ( let i = 0; i < menu_List.length; i++) {%>
+        <li><%= menu_List[i].id %> : <%=menu_List[i].sub_title %> </li>
+        <% } %>
+    </ul>
+  
+    최근 모텔 리스트
+    <ul>
+        <% for(let i = 0; i< data_list.length; i++) {%>
+        <li>  <%= `상품명 : ${data_list[i].product_title}  , 
+                  image_url : ${data_list[i].image_url} ,
+                  평점 : ${data_list[i].score}, 
+                  리뷰 인원: ${data_list[i].review_count}, 
+            `  %>   </li>
+            <% } %>
+    </ul>
+    <table border="1"  width ="100%" height="300" align = "center" >
+        <th> 상품명</th>
+        <th>이미지</th>
+        <th>평점</th>
+        <th>리뷰 인원</th>
+        <% for(let i = 0; i< data_list.length; i++) {%>
+            <tr>
+                <td><%= data_list[i].product_title %> </td>
+                <td><img src= <%= ` ${data_list[i].image_url} ` %> height= 100px alt=""></td>
+                <td> <%= data_list[i].score %> </td>
+                <td><%= data_list[i].review_count%></td>
+            </tr>   
+          <% } %>
+    </table>
+
+
+</body>
+</html>
