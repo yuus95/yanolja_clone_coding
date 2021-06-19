@@ -58,13 +58,13 @@ exports.default = async function (req, res) {
                     console.error('daycheck err '+ err);
                 }
                 
-                console.log("테스트",typeof(room_price[0].weekend_sleep_price));
-                console.log("테스트",parseInt(product[0].sleep_price));
-                console.log("테스트",parseFloat(product[0].score));
+                // console.log("테스트",typeof(room_price[0].weekend_sleep_price));
+                // console.log("테스트",parseInt(product[0].sleep_price));
+                // console.log("테스트",parseFloat(product[0].score));
 
                 
-                console.log(type_list);
-                console.log(product)
+                // console.log(type_list);
+                // console.log(product)
                 connection.release();
                 // return res.render('index',{isSucees:true,mesaage:"데이터 요청성공",code:200,menu_List:type_list,data_list:product});
             return res.json({code:200,isSucees:true,mesaage:"데이터 요청성공",menu_List:type_list,data_list:product});
